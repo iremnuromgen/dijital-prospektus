@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".signupPage">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        style="@style/CardViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/bg_edittext1"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KAYIT"
+                android:textAlignment="center"
+                android:textColor="@color/color2"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/textRegisterMail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext1"
+                android:hint="E-Mail Adresi"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4" />
+            
+            <TextView
+                android:id="@+id/errorMail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lütfen bir mail adresi girin"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/textRegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext1"
+                android:hint="Şifre"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4" />
+
+            <TextView
+                android:id="@+id/errorPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lütfen bir şifre girin"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/textRegisterPasswordTwo"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_edittext1"
+                android:hint="Şifreyi Tekrar Giriniz"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4" />
+
+            <TextView
+                android:id="@+id/errorPasswordTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lütfen şifrenizi tekrar girin"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/securityPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Güvenli bir şifre oluşturun."
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardOne"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#dcdcdc"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/checkicon"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center|start"
+                        android:text="Şifreniz en az 8 karakterli olmalıdır"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardTwo"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#dcdcdc"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/checkicon"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:gravity="center|start"
+                        android:text="En az 1 büyük harf (A-Z) bulunmalıdır"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardThree"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#dcdcdc"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/checkicon" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="En az 1 küçük harf (a-z) bulunmalıdır"
+                        android:textColor="@color/black"
+                        android:gravity="center|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardFour"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#dcdcdc"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="14dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/checkicon" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="En az 1 rakam (0-9) bulunmalıdır"
+                        android:textColor="@color/black"
+                        android:gravity="center|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardFive"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:cardBackgroundColor="#dcdcdc"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="25dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/checkicon" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="En az bir özel karakter (!@#$%^*_) bulunmalıdır."
+                        android:textColor="@color/black"
+                        android:gravity="center|start"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonRegister"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button5"
+                android:onClick="signUp"
+                android:text="Kayıt Ol"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/signInAccount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Zaten bir hesabın var mı?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.83" />
+
+    <TextView
+        android:id="@+id/signIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:text="Giriş Yap"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.83" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

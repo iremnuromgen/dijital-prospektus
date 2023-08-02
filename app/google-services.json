@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "728777864422",
+    "firebase_url": "https://digital-prospectus-e0451-default-rtdb.firebaseio.com",
+    "project_id": "digital-prospectus-e0451",
+    "storage_bucket": "digital-prospectus-e0451.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728777864422:android:794426a75cddc292897727",
+        "android_client_info": {
+          "package_name": "com.example.dijitalprospekts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728777864422-296ri4tf0652muusaqk8jdntm2vr61oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFh96pIEKsJ05zFE8peYCO0KHPEYfSPN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728777864422-296ri4tf0652muusaqk8jdntm2vr61oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

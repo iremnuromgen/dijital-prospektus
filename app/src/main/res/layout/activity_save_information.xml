@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bodyContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6"
+    tools:context=".saveInformation">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginRight="18dp"
+        android:text="Bilgilerinizi"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginRight="18dp"
+        android:text="Tamamlayın"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold|normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userProfile"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:src="@drawable/avataruser"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/addProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="120dp"
+                android:background="@drawable/bg_button8"
+                android:drawableStart="@drawable/cameraicon"
+                android:onClick="loadImage"
+                android:paddingLeft="5dp"
+                android:text="Resim Ekle"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_edittext1"
+            android:drawableStart="@drawable/personicon"
+            android:hint="Ad Soyad"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4" />
+
+        <EditText
+            android:id="@+id/userPhone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_edittext1"
+            android:drawableStart="@drawable/phoneicon"
+            android:hint="Telefon Numarası"
+            android:inputType="text|phone"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/color4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/userWeight"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_edittext1"
+                android:drawableStart="@drawable/weighticon"
+                android:hint="Kilo"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4" />
+
+            <EditText
+                android:id="@+id/userAge"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/bg_edittext1"
+                android:drawableStart="@drawable/ageicon"
+                android:hint="Yaş"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/color4" />
+
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:paddingLeft="10dp" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="121dp"
+                android:layout_height="match_parent"
+                android:buttonTint="@color/color1"
+                android:drawableStart="@drawable/femaleicon"
+                android:text="Kadın"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/color1"
+                android:drawableStart="@drawable/maleicon"
+                android:text="Erkek"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/infoSave"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/bg_button3"
+        android:text="Kaydet"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

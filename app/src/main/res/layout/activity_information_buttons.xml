@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bodyContainer"
+    android:background="#ffffff"
+    tools:context=".informationButtons">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/beforePage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_backicon"
+            android:layout_gravity="center_vertical"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:text="Bilgi Butonları"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/favorite"
+            android:onClick="clickFavorite"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:button="@drawable/selector_medicinelist"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/buttonBilgi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginTop="100dp"
+        android:text="-"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="190dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonUyari"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button9"
+            android:text="UYARI !"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNedir"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Nedir?"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNeIcinKullanilir"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Ne İçin Kullanılır?"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonDikkatEdilmesiGerekenler"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Dikkat Edilmesi Gerekenler"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonNasilKullanilir"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Nasıl Kullanılır?"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonYanEtkileri"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Yan Etkileri Nelerdir?"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonSaklamaKosullari"
+            android:layout_width="301dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bg_button3"
+            android:text="Saklama Koşulları"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

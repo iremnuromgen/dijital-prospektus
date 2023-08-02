@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bodyContainer"
+    android:background="#ffffff"
+    tools:context=".searchPage">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_corner"
+        android:elevation="2dp"
+        app:itemIconSize="35dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İlaç Arama Sayfası"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:srcCompat="@drawable/ilacara"
+        android:layout_marginTop="120dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bir ilacın prospektüsünü mü arıyorsunuz? İlacın ismini girin ya da fotoğrafını yükleyin
+."
+        android:textColor="@color/black"
+        android:layout_marginTop="320dp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="410dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/medicineName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="İlaç İsmi Gir"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_edittext1"
+            android:textColorHint="@color/color4"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:padding="15dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/errorMedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lütfen bir ilaç ismi girin ya da resim yükleyin."
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ya da"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/medicineImage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Resim Yükle"
+            android:textColorHint="@color/black"
+            android:background="@drawable/bg_button8"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:padding="15dp"
+            android:textSize="15sp"
+            android:gravity="start"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/cameraicon"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/medicineSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ARA"
+            android:onClick="search"
+            android:textAllCaps="true"
+            android:background="@drawable/bg_button5"
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

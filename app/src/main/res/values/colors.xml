@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="color1">#24214E</color>
+    <color name="color2">#F87267</color>
+    <color name="color3">#ffffff</color>
+    <color name="color4">#61646A</color>
+    <color name="color5">#F1B215</color>
+    <color name="color6">#D2D2D2</color>
+    <color name="colorAccent">#177E05</color>
+    <color name="colorDefault">#dcdcdc</color>
+    <color name="pressed_color">#2324214E</color>
+
+</resources>
